@@ -11,8 +11,9 @@ if(!exists("getPlotData", mode="function")) {
 originalLocale <- Sys.getlocale("LC_TIME");
 Sys.setlocale("LC_TIME","C")
 
-#Setup multipage plot
-par(mfrow = c(2, 2)) 
+#Setup multipage plot and png file
+png(file="plot4.png", bg="transparent", width=480, heigh=480, units="px")
+par(mfrow = c(2, 2))
 
 #Load subset of household_power_consumption.txt
 powerSubset <- getPlotData()
@@ -32,8 +33,7 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=
 #plot 4
 plot(powerSubset$Time, powerSubset$Global_reactive_power,type="l", xlab="datetime", ylab="Global_reactive_power")
 
-#copy to file and save
-dev.copy(png,"plot4.png")
+#save to file
 dev.off()
 
 #restore locale to user original

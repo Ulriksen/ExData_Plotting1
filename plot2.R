@@ -11,15 +11,18 @@ if(!exists("getPlotData", mode="function")) {
 originalLocale <- Sys.getlocale("LC_TIME");
 Sys.setlocale("LC_TIME","C")
 
-#setup single page plot
+#setup single page plot and png file
 par(mfrow=c(1,1))
+png(file="plot2.png", bg="transparent", width=480, heigh=480, units="px")
+
 
 #Load subset of household_power_consumption.txt
 powerSubset <- getPlotData()
 
 #plot and save file.
 plot(powerSubset$Time,powerSubset$Global_active_power, type="l",ylab ="Global Active Power (kilowatts)", xlab=NA) 
-dev.copy(png,"plot2.png")
+
+#save to file
 dev.off()
 
 #restore locale to user original
