@@ -19,7 +19,7 @@ powerSubset <- getPlotData()
 
 #plot and save file.
 plot(powerSubset$Time,powerSubset$Global_active_power, type="l",ylab ="Global Active Power (kilowatts)", xlab=NA) 
-dev.copy(png,"plog2.png")
+dev.copy(png,"plot2.png")
 dev.off()
 
 #restore locale to user original

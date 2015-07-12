@@ -19,7 +19,7 @@ powerSubset <- getPlotData()
 
 #plot and save file.
 hist(powerSubset$Global_active_power, main="Global Active Power", xlab ="Global Active Power (kilowatts)", col="red")
-dev.copy(png,"plog1.png")
+dev.copy(png,"plot1.png")
 dev.off()
 
 #restore locale to user original

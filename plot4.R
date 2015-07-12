@@ -33,7 +33,7 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=
 plot(powerSubset$Time, powerSubset$Global_reactive_power,type="l", xlab="datetime", ylab="Global_reactive_power")
 
 #copy to file and save
-dev.copy(png,"plog4.png")
+dev.copy(png,"plot4.png")
 dev.off()
 
 #restore locale to user original

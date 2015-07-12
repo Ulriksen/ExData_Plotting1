@@ -23,7 +23,7 @@ plot(powerSubset$Time, powerSubset$Sub_metering_1, type="l", ylab="Energy sub me
 lines(powerSubset$Time, powerSubset$Sub_metering_2, type="l", col="red")
 lines(powerSubset$Time, powerSubset$Sub_metering_3, type="l", col="blue")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=c("black", "red", "blue"))
-dev.copy(png,"plog3.png")
+dev.copy(png,"plot3.png")
 dev.off()
 
 #restore locale to user original
